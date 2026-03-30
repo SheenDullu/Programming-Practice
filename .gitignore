@@ -36,3 +36,4 @@ hs_err_pid*
 .idea
 
 /practiceproblems.iml
+.DS_Store

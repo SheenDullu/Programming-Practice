@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class ArrayToKConsecutiveSets {
-    public boolean isPossibleDivide(int[] nums, int k) {
+    public static boolean isPossibleDivide(int[] nums, int k) {
         TreeMap<Integer, Integer> map = new TreeMap<>();
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
@@ -26,5 +26,10 @@ public class ArrayToKConsecutiveSets {
             if (value == 0) map.remove(key);
         }
         return map.size() == 0;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{5,2,9,7,2};
+        System.out.println(isPossibleDivide(nums, 2));
     }
 }
